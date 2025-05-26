@@ -1,0 +1,96 @@
+
+.terms-container {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9; 
+    padding: 40px ;
+}
+
+
+.terms-content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s; 
+}
+
+
+.terms-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+}
+
+
+.terms-content h1 {
+    color: #512da8;
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    text-align: center; 
+}
+
+.terms-content h2 {
+    color: #333;
+    font-size: 1.8rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    position: relative; 
+}
+
+.terms-content h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 50px;
+    height: 4px;
+    background-color: #512da8; 
+    transition: width 0.3s; 
+}
+
+.terms-content h2:hover::before {
+    width: 100%; 
+}
+
+
+.terms-content p {
+    color: #555;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    transition: color 0.3s;
+}
+
+.terms-content p:hover {
+    color: #333; 
+}
+
+.terms-content ul {
+    margin: 10px 0 20px 20px;
+    list-style-type: disc; 
+}
+
+.terms-content li {
+    margin-bottom: 5px;
+    color: #555;
+    transition: transform 0.3s; 
+}
+
+.terms-content li:hover {
+    transform: scale(1.05); 
+}
+
+
+.terms-content {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

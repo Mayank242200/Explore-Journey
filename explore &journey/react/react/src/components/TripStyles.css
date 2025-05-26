@@ -1,0 +1,112 @@
+.trip {
+    background-image: url('../assets/j2.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    padding: 4rem 2rem;
+    color: #fff; 
+    text-align: center;
+    position: relative;
+    background-repeat: no-repeat; 
+}
+
+.trip::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); 
+    z-index: 1;
+}
+
+.trip h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    z-index: 2;
+    font-family: 'Arial', sans-serif; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9); 
+}
+
+.trip p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    z-index: 2;
+    font-family: 'Georgia', serif; 
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); 
+}
+
+.tripcard {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem; 
+    z-index: 2;
+    position: relative;
+}
+
+.t-card {
+    text-align: start;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2); 
+    border-radius: 7px;
+    cursor: pointer;
+    padding: 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background: rgba(255, 255, 255, 0.9); 
+}
+
+.t-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.t-image {
+    height: 200px;
+    overflow: hidden;
+    border-radius: 7px;
+}
+
+.t-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 7px;
+}
+
+.t-image:hover img {
+    transform: scale(1.05);
+}
+
+.t-card h4 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+    color: #007bff; 
+}
+
+.t-card p {
+    font-size: 1rem;
+    margin: 0;
+    line-height: 1.5;
+}
+
+
+@media screen and (max-width: 850px) {
+    .trip {
+        padding: 2rem 1rem;
+    }
+
+    .tripcard {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .t-card {
+        width: 100%; 
+        margin: 1rem 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .tripcard {
+        grid-template-columns: 1fr; 
+    }
+}

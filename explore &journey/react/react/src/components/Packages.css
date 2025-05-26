@@ -1,0 +1,57 @@
+
+.packages-container {
+  background-image: url('../assets/mountain2.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  min-height: 100vh; 
+}
+
+
+
+.package-item {
+  background-color: rgba(255, 255, 255, 0.9); 
+  border-radius: 10px;
+  overflow: hidden;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  transition: transform 0.2s, box-shadow 0.2s; 
+}
+
+.package-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+}
+
+.package-item img {
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid #ddd;
+}
+
+.package-item h2 {
+  font-size: 1.5rem;
+  margin: 15px 0 10px;
+}
+
+.package-item p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+.package-item p:nth-child(3) { 
+  font-weight: bold;
+  color: #008080;
+}
+
+.package-item p:nth-child(4) { 
+  font-style: italic;
+  color: #555;
+}
+
